@@ -1,0 +1,47 @@
+@import "../variables";
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: $laptop) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 320px) {
+    }
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      @media (max-width: $mobileS) {
+        padding: 13px 15px;
+        border-radius: 30px;
+      }
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
